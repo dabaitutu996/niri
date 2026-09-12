@@ -4735,7 +4735,7 @@ fn hardcoded_overview_bind(raw: Keysym, mods: ModifiersState) -> Option<Bind> {
 
     let mut repeat = true;
     let action = match raw {
-        Keysym::Escape | Keysym::Return => {
+        Keysym::Escape | Keysym::Return | Keysym::space => {
             repeat = false;
             Action::ToggleOverview
         }
